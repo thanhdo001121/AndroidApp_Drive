@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".history.MainHistoryActivity"
+    android:background="@drawable/row_item_background">
+
+    <ImageView
+        android:id="@+id/backImg"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/back_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tlAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/row_item_background"
+        app:tabIndicatorColor="@color/myGreen"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@style/TabLayoutAppearance"
+        app:tabTextColor="@color/myGrey">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabGas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gas" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabOil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oil" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabRepair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repair" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tlAction"
+        android:layout_alignTop="@id/tlAction"
+        android:layout_marginTop="48dp"
+        android:nestedScrollingEnabled="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnMore"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_baseline_more_horiz_24"
+        app:backgroundTint="@color/myGreen"
+        app:layout_anchor="@id/tlAction"
+        app:maxImageSize="40dp"
+        app:tint="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdd"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/plus_ic"
+        app:backgroundTint="@color/myGreen"
+        app:layout_anchor="@id/tlAction"
+        app:maxImageSize="25dp"
+        android:visibility="invisible"
+        app:tint="@color/white" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnExport"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="134dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/export_ic"
+        app:backgroundTint="@color/myGreen"
+        app:layout_anchor="@id/tlAction"
+        app:maxImageSize="25dp"
+        android:visibility="invisible"
+        app:tint="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnShare"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/share_ic"
+        app:backgroundTint="@color/myGreen"
+        app:layout_anchor="@id/tlAction"
+        app:maxImageSize="25dp"
+        android:visibility="invisible"
+        app:tint="@color/white" />
+
+
+</RelativeLayout>

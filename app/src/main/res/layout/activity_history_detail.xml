@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".history.HistoryDetailActivity"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/row_item_background">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvActionFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_baseline_edit_24"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="3dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp">
+
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/calendar_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:layout_marginStart="12dp"
+            android:id="@+id/date"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_icon"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10/10/2010"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/MyTextContentAppearance"
+            app:layout_constraintTop_toBottomOf="@id/date"
+            app:layout_constraintStart_toStartOf="@id/date"/>
+
+        <TextView
+            android:id="@+id/odometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Odometer"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/date"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvLastOdometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="52"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/MyTextContentAppearance"
+            app:layout_constraintTop_toBottomOf="@id/odometer"
+            app:layout_constraintStart_toStartOf="@id/odometer"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp">
+
+        <ImageView
+            android:id="@+id/img_icon2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/gallon_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:layout_marginStart="12dp"
+            android:id="@+id/gallon"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Gallon"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_icon2"/>
+
+        <TextView
+            android:id="@+id/tvGallon"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="5L"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/MyTextContentAppearance"
+            app:layout_constraintTop_toBottomOf="@id/gallon"
+            app:layout_constraintStart_toStartOf="@id/gallon"/>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gallon"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/MyTextContentAppearance"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            app:layout_constraintStart_toStartOf="@id/location"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/MyTextContentAppearance"
+            app:layout_constraintTop_toBottomOf="@id/note"
+            app:layout_constraintStart_toStartOf="@id/note"/>
+
+        <ImageView
+            android:id="@+id/img_icon3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/money_icon"
+            app:layout_constraintTop_toBottomOf="@id/tvNote"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            app:layout_constraintTop_toTopOf="@id/img_icon3"
+            app:layout_constraintTop_toBottomOf="@id/tvNote"
+            app:layout_constraintStart_toEndOf="@id/img_icon3"/>
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25.000 VND"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:textAppearance="@style/MyTextContentAppearance"
+            app:layout_constraintTop_toBottomOf="@id/price"
+            app:layout_constraintStart_toStartOf="@id/price"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

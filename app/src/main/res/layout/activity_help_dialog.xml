@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@color/md_grey_800"
+    >
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTitle"
+        android:text="This one is in trouble. Do you want to help them?"
+        android:textColor="@color/md_white_1000"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="12dp"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textAppearance="@style/MyTextTitleAppearance"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/userEmail"
+        style="@style/Button2"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:hint="Email"
+        android:minWidth="320dp"
+        android:minHeight="50dp"
+        android:paddingRight="12dp"
+        android:layout_marginBottom="10dp"
+        android:singleLine="true"
+        android:textSize="15sp"
+        android:editable="false"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/userMess"
+        style="@style/Button2"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:hint="User mess"
+        android:minWidth="320dp"
+        android:minHeight="50dp"
+        android:paddingRight="12dp"
+        android:singleLine="true"
+        android:textSize="15sp"
+        android:editable="false"
+        android:layout_below="@+id/userEmail"
+        app:layout_constraintTop_toBottomOf="@id/userEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnYes"
+        style="@style/Button1"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userMess"
+        android:layout_gravity="center"
+        android:layout_marginTop="11dp"
+        android:text="Yes"
+        app:layout_constraintTop_toBottomOf="@id/userMess"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnNo"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNo"
+        style="@style/Button1"
+        android:backgroundTint="@color/md_red_700"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:text="No"
+        android:layout_below="@+id/userMess"
+        app:layout_constraintTop_toBottomOf="@id/userMess"
+        app:layout_constraintStart_toEndOf="@id/btnYes"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainpage.MainpageActivity"
+    android:padding="8dp"
+    android:background="@drawable/row_item_background">
+
+    <ImageView
+        android:id="@+id/logo_crop"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/logo_crop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        app:tint="@color/white"/>
+
+    <TextView
+        android:id="@+id/tvHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/MyTextTitleAppearance"
+        android:text="Welcome back"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/logo_crop"
+        app:layout_constraintBottom_toBottomOf="@id/logo_crop"
+        app:layout_constraintStart_toEndOf="@id/logo_crop"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"/>
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/logo"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:src="@drawable/logo"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/tvHead"/>-->
+
+    <LinearLayout
+        android:id="@+id/historyTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/logo_crop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/reminderTask"
+        android:background="@drawable/history_mainpage_card"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:tint="@color/white"
+            android:src="@drawable/note_ic"
+            android:clickable="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="History"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            android:clickable="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reminderTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/historyTask"
+        app:layout_constraintStart_toEndOf="@id/historyTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/reminder_mainpage_card"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:tint="@color/white"
+            android:src="@drawable/reminder_ic"
+            android:clickable="false"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reminder"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            android:clickable="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mapTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/historyTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/helpTask"
+        android:background="@drawable/map_mainpage_card"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:tint="@color/white"
+            android:src="@drawable/map_ic"
+            android:clickable="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Map"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            android:clickable="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/helpTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/mapTask"
+        app:layout_constraintStart_toEndOf="@id/mapTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/help_mainpage_card"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:tint="@color/white"
+            android:src="@drawable/help_ic"
+            android:clickable="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            android:clickable="false"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/logoutTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/helpTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/logout_mainpage_card"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:tint="@color/white"
+            android:src="@drawable/logout_icon"
+            android:clickable="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/MyTextTitleAppearance"
+            android:clickable="false"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
